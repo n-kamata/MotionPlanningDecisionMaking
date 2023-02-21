@@ -6,10 +6,10 @@ These files in this project are extracted from [this directory](https://github.c
 Simulation results are following.
 
 The self-driving car can choose a trajectory that did not collide and avoid to the left.
-<img src="../MotionPlanningDecisionMaking/left_nudge.png" width="600">
+<img src="https://github.com/n-kamata/MotionPlanningDecisionMaking/left_nudge.png" width="600">
 
 The self-driving car can choose a trajectory that did not collide with less steering wheel angle and avoid to the right.
-<img src="../MotionPlanningDecisionMaking/right_nudge.png" width="600">
+<img src="https://github.com/n-kamata/MotionPlanningDecisionMaking/right_nudge.png" width="600">
 
 The self-driving car can eventually avoid last car and return to its original lane.
-<img src="../MotionPlanningDecisionMaking/small_left_nudge.png" width="600">
+<img src="https://github.com/n-kamata/MotionPlanningDecisionMaking/small_left_nudge.png" width="600">
