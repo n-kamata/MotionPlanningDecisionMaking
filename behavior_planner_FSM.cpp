@@ -72,9 +72,6 @@ State BehaviorPlannerFSM::get_closest_waypoint_goal(
   return waypoint;
 }
 
-double distance(double v0, double vt, double a){
-  return abs((vt * vt - v0 * v0) / (2 * a));
-}
 
 double BehaviorPlannerFSM::get_look_ahead_distance(const State& ego_state) {
   auto velocity_mag = utils::magnitude(ego_state.velocity);
@@ -84,8 +81,7 @@ double BehaviorPlannerFSM::get_look_ahead_distance(const State& ego_state) {
   // the distance you will need to come to a stop while traveling at speed V and
   // using a comfortable deceleration.
  VelocityProfileGenerator vpg;
-  auto look_ahead_distance = vpg.calc_distance(velocity_mag, 0, -_max_accel);
-  // auto look_ahead_distance = distance(0.0, velocity_mag, -0.5);  // <- Fix This
+  auto look_ahead_distance = vpg.calc_distance(velocity_mag, 0, -_max_accel); // <- Fix This
   
   LOG(INFO) << "Calculated look_ahead_distance: " << look_ahead_distance;
 
